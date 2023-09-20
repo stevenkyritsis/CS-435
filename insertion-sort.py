@@ -27,39 +27,43 @@ arr = []
 for i in range(1,33):
     arr.append(i)
 
+print("##########PART 1##########\n")
+
 # 1a Test for best case [n=32]
 print("Input array:\t", arr, "\n")
 sorted, count = insert_sort(arr,len(arr))
 print("Sorted array:\t", sorted,
-      "\nBest case comparisons:\t", count, "\n")
+      "\nBest case comparisons: ", count, "\n")
 
 # 1b Test for worst case [n=32]
 arr.reverse()
 print("Input array:\t", arr, "\n")
 sorted, count = insert_sort(arr,len(arr))
 print("Sorted array:\t", sorted,
-      "\nWorst case comparisons:\t", count, "\n")
+      "\nWorst case comparisons: ", count, "\n")
 
 # 1c Test for average case [n=32]
-arr = random.randint(32, size=(32)) # Testing with random integers between 1-32
+arr = random.choice(range(33), 32, replace=False) # Testing with random integers between 1-32
 print("Input array:\t", arr, "\n")
 sorted, count = insert_sort(arr,len(arr))
 print("Sorted array:\t", sorted,
-      "\nAverage case comparisons:\t", count, "\n")
+      "\nAverage case comparisons: ", count, "\n")
 
 #######################################################################################
 
+print("\n##########PART 2##########\n")
+
 # 2a Test random integers array[n=100]
-arr = random.randint(100, size=(100)) # Testing with random integers between 1-100
+arr = random.choice(range(101), 100, replace=False) # Testing with random integers between 1-100
 sorted, count = insert_sort(arr,len(arr))
-print("Comparisons for 100 integers:\t", count, "\n")
+print("Comparisons for 100 integers: ", count, "\n")
 
 # 2b Test random integers array[n=1000]
-arr = random.randint(1000, size=(1000)) # Testing with random integers between 1-1000
+arr = random.choice(range(1001), 1000, replace=False) # Testing with random integers between 1-1000
 sorted, count = insert_sort(arr,len(arr))
-print("Comparisons for 1,000 integers:\t", count, "\n")
+print("Comparisons for 1,000 integers: ", count, "\n")
 
 # 2c Test random integers array[n=10000]
-arr = random.randint(10000, size=(10000)) # Testing with random integers between 1-10,000
+arr = random.choice(range(10001), 10000, replace=False) # Testing with random integers between 1-10,000
 sorted, count = insert_sort(arr,len(arr))
-print("Comparisons for 10,000 integers:\t", count, "\n")
+print("Comparisons for 10,000 integers: ", count, "\n")
