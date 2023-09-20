@@ -27,7 +27,7 @@ arr = []
 for i in range(1,33):
     arr.append(i)
 
-print("##########PART 1##########\n")
+print("\n##########PART 1##########\n")
 
 # 1a Test for best case [n=32]
 print("Input array:\t", arr, "\n")
