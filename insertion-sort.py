@@ -4,12 +4,12 @@
 #   9-22-23             #
 #   Insertion sort with #
 #  a comparison counter #
-#########################\
+#########################
 
 # Import random from numy to generate random number
 from numpy import random
 
-# Define insertion sort function
+# Define insertion sort function | Boolean function SMALLER(A, i, j)
 def insert_sort(a, n):
     compcount = 0
     for i in range(1,n):
