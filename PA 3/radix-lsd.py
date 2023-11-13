@@ -25,18 +25,18 @@ def radix_sort(S):
         if len(S[i]) < max_len:
             S[i] = S[i] + ' ' * (max_len - len(S[i]))
 
-    indexes = list(range(len(S)))
+    index = list(range(len(S)))
     for index in range(max_len):
         buckets = [[] for _ in range(256)]
-        for i in indexes:
+        for i in index:
             if(S[i][index] != ''):
                 buckets[ord(S[i][index])].append(i)
             else:
                 buckets[0].append(i)
 
-        indexes = [i for bucket in buckets for i in bucket]
+        index = [i for bucket in buckets for i in bucket]
 
-    return indexes
+    return index
 
 # second output file openning in write mode
 g = open(sys.argv[2], "w")
